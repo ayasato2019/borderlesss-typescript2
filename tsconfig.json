@@ -19,11 +19,11 @@
     "useUnknownInCatchVariables": true,                     /* catchブロックの変数をunknown型にする */
 
     /* その他の設定 */
-    "skipLibCheck": true,                                   /* 型定義ファイル（d.ts）のチェックをスキップ */
     "noUnusedLocals": true,                                 /* 使用していないローカル変数があればエラー */
     "noUnusedParameters": true,                             /* 使用していない関数のパラメータがあればエラー */
     "noImplicitReturns": true,                              /* 明示的に返り値を指定しない場合にエラー */
     "noFallthroughCasesInSwitch": true,                     /* switch文でのcaseのフォールスルーを禁止 */
     "skipDefaultLibCheck": true,                            /* デフォルトライブラリの型チェックをスキップ */
+    "resolveJsonModule": true,
   }
 }
