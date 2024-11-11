@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom'
 import githubIcon from '../assets/images/github-mark.svg';
 import twitterIcon from '../assets/images/x-logo.png';
-import noteIcon from '../assets/images/note-icon.svg';
+// import noteIcon from '../assets/images/note-icon.svg';
 
 const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -13,7 +14,7 @@ const Header: React.FC = () => {
     <header className="header">
       <div className="relative selection:bg-rose-700 selection:text-amber-500 px-2 lg:px-4 py-4 lg:py-8 flex justify-between items-center lg:justify-center flex-wrap w-full lg:w-auto lg:flex-col">
         <h1 className="logo px-5 lg:mt-4 lg:px-4">
-          <a href="/">BORDERLESSS</a> {/* <a>タグから<Link>タグに変更 */}
+          <Link to="/">BORDERLESSS</Link> {/* <a>タグから<Link>タグに変更 */}
         </h1>
 
         <button
@@ -36,25 +37,25 @@ const Header: React.FC = () => {
           <ul className="header-nav-list" role="menu">
             {["/works/", "/service/", "/blog/"].map((link, index) => (
               <li key={index} className="w-full lg:w-auto">
-                <a href={link} className="header-nav-link flex p-4 lg:pl-4 ease-out font-en cursor-pointer break-keep w-full h-full dark:text-white">{link.slice(1, -1).toUpperCase()}</a>
+                <Link to={link} className="header-nav-link flex p-4 lg:pl-4 ease-out font-en cursor-pointer break-keep w-full h-full dark:text-white">{link.slice(1, -1).toUpperCase()}</Link>
               </li>
             ))}
             <li className="w-full lg:w-auto">
-              <a href="/contact/" className="header-nav-link flex p-4 lg:pl-4 ease-out font-en cursor-pointer break-keep h-full dark:text-white bg-rose-700 text-center lg:bg-inherit rounded-full w-auto mx-auto lg:mx-0 mt-8 lg:mt-0 hover:bg-amber-300 lg:hover:bg-inherit">CONTACT</a>
+              <Link to="/contact/" className="header-nav-link flex p-4 lg:pl-4 ease-out font-en cursor-pointer break-keep h-full dark:text-white bg-rose-700 text-center lg:bg-inherit rounded-full w-auto mx-auto lg:mx-0 mt-8 lg:mt-0 hover:bg-amber-300 lg:hover:bg-inherit">CONTACT</Link>
             </li>
             <li className="w-full lg:w-auto">
-              <a href="/privacy-policy/" className="flex p-4 text-slate-500 font-en cursor-pointer ease-out break-keep h-full justify-center lg:justify-start text-xs w-full lg:w-auto dark:text-white">Privacy Policy</a>
+              <Link to="/privacy-policy/" className="flex p-4 text-slate-500 font-en cursor-pointer ease-out break-keep h-full justify-center lg:justify-start text-xs w-full lg:w-auto dark:text-white">Privacy Policy</Link>
             </li>
             <li className="sns-buttons flex gap-2 p-4 mg:p-0 items-center justify-center">
-              <a href="/privacy-policy/" className="block w-10 h-10 overflow-hidden p-2 lg:p-2 max-w-20">
+              <Link to="https://github.com/ayasato2019" className="block w-10 h-10 overflow-hidden p-2 lg:p-2 max-w-20">
                 <img src={githubIcon} alt="GitHubのロゴ" />
-              </a>
-              <a href="https://x.com/borderlesss_aya" className="block w-10 h-10 overflow-hidden p-3 lg:p-3 max-w-20">
+              </Link>
+              <Link to="https://x.com/borderlesss_aya" className="block w-10 h-10 overflow-hidden p-3 lg:p-3 max-w-20">
                 <img src={twitterIcon} alt="X旧Twitterのロゴ" />
-              </a>
-              <a href="https://note.com/borderlesss_aya" className="block w-10 h-10 overflow-hidden lg:p-0 max-w-20">
+              </Link>
+              {/* <Link to="https://note.com/borderlesss_aya" className="block w-10 h-10 overflow-hidden lg:p-0 max-w-20">
                 <img src={noteIcon} alt="noteのロゴ" />
-              </a>
+              </Link> */}
             </li>
           </ul>
         </nav>

@@ -1,5 +1,5 @@
 // Layout.tsx
-import React from 'react';
+import React, { useEffect } from 'react';
 import Header from '../components/Header';
 
 type LayoutProps = {
@@ -8,11 +8,14 @@ type LayoutProps = {
 };
 
 export default function Layout({ children, title }: LayoutProps) {
+	useEffect(() => {
+		document.title = `${title.toUpperCase()} | BORDERLESSS`;
+	}, [title]);
+
 	const currensYear = new Date().getFullYear();
 
 	return (
 		<>
-			<div id="particles-js"></div>
 			<div className="wrapper max-w-7xl mx-auto relative w-full h-auto min-h-screen">
 				<Header />
 				<main className="absolute top-0 left-0 w-full h-full min-h-screen flex justify-center items-center">

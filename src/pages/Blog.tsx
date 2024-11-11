@@ -1,13 +1,9 @@
-import React from 'react';
+import Layout from '../components/Layout';
 
-
-const Works: React.FC = () => {
+export default function Blog() {
 	return (
-		<section className="main-view w-auto h-auto min-w-[672px] lg:ml-[220px] 2xl:ml-0 min-h-[448.82px]">
-			<h1 className="page-title">Works</h1>
-
-		</section>
+		<Layout title="blog">
+			<p>ブログ</p>
+		</Layout>
 	);
 };
-
-export default Works;

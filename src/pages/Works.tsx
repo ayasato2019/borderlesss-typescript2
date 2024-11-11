@@ -1,4 +1,4 @@
-import Layout from './Layout';
+import Layout from '../components/Layout';
 
 // interface Work {
 // 	id: string;
@@ -13,6 +13,7 @@ import Layout from './Layout';
 // }
 
 export default function Works() {
+
 	return (
 		<Layout title="works">
 			<p>wa-kusu</p>
