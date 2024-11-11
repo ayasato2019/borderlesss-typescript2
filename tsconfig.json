@@ -1,0 +1,29 @@
+{
+  "compilerOptions": {
+    /* Projects */
+    "target": "es2016",                                    /* JavaScriptのターゲットバージョン */
+    "module": "commonjs",                                   /* モジュールシステムの指定 */
+    
+    /* JSX設定 */
+    "jsx": "react-jsx",                                     /* React 17以降のJSX変換方式を使用 */
+    "esModuleInterop": true,                                /* CommonJSモジュールとの互換性を有効にする */
+    "forceConsistentCasingInFileNames": true,                /* インポートのファイル名の大文字小文字を厳密にチェック */
+
+    /* Type Checking */
+    "strict": true,                                         /* 厳格な型チェックを有効にする */
+    "skipLibCheck": true,                                   /* ライブラリの型チェックをスキップ */
+    "noImplicitAny": true,                                  /* any型の暗黙的な使用を禁止 */
+    "strictNullChecks": true,                               /* nullとundefinedの型チェックを強化 */
+    "strictFunctionTypes": true,                            /* 関数の型互換性を厳格にチェック */
+    "noImplicitThis": true,                                 /* thisの型がanyにならないようにする */
+    "useUnknownInCatchVariables": true,                     /* catchブロックの変数をunknown型にする */
+
+    /* その他の設定 */
+    "skipLibCheck": true,                                   /* 型定義ファイル（d.ts）のチェックをスキップ */
+    "noUnusedLocals": true,                                 /* 使用していないローカル変数があればエラー */
+    "noUnusedParameters": true,                             /* 使用していない関数のパラメータがあればエラー */
+    "noImplicitReturns": true,                              /* 明示的に返り値を指定しない場合にエラー */
+    "noFallthroughCasesInSwitch": true,                     /* switch文でのcaseのフォールスルーを禁止 */
+    "skipDefaultLibCheck": true,                            /* デフォルトライブラリの型チェックをスキップ */
+  }
+}
