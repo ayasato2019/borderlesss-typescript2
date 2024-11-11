@@ -1,5 +1,21 @@
 import Layout from '../components/Layout';
-import worksData from '../data/worksData.json';
+
+const worksData = {
+	worksWebsite: [
+		{
+			id: "1",
+			title: "Website client A",
+			image_path: "works-cliantA"
+		},
+		{
+			id: "2",
+			title: "Website client B",
+			image_path: "works-cliantB"
+		}
+	],
+	worksApp: [],
+	worksOther: []
+};
 
 interface Work {
 	id: string;
